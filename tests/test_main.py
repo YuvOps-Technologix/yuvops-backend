@@ -25,6 +25,7 @@ def test_health():
         "status": "healthy",
     }
 
+
 def test_api_status():
     response = client.get("/api/v1/status")
 
@@ -35,6 +36,7 @@ def test_api_status():
     assert data["service"] == "YuvOps API"
     assert data["version"] == "v1"
     assert data["status"] == "operational"
+
 
 def test_api_info():
     response = client.get("/api/v1/info")
